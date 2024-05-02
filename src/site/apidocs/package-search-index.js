@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"pl.put.poznan.SQC.app"},{"l":"pl.put.poznan.SQC.app.API"},{"l":"pl.put.poznan.SQC.app.GUI"},{"l":"pl.put.poznan.SQC.app.ScenarioManagement"},{"l":"pl.put.poznan.SQC.app.Wizytator"}];updateSearchResults();
