@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.put.poznan.SQC.app.GUI.ScenarioViewController">
+   <VBox>
+      <HBox alignment="CENTER">
+         <Label text="Scenariusz" textFill="#ff00dd">
+            <HBox.margin>
+               <Insets bottom="20.0" left="20.0" right="5.0" top="20.0" />
+            </HBox.margin>
+            <font>
+               <Font name="Comic Sans MS" size="24.0" />
+            </font>
+         </Label>
+         <TextField fx:id="scenarioNameId" promptText="Behawioralny Odczyt Obiektów Budowlanych i Architektonicznych™ - BOOBA" HBox.hgrow="ALWAYS">
+            <HBox.margin>
+               <Insets bottom="20.0" top="20.0" />
+            </HBox.margin>
+            <font>
+               <Font name="System Bold Italic" size="11.0" />
+            </font>
+         </TextField>
+         <Label fx:id="scenarioErrorId" text="Label" visible="false">
+            <HBox.margin>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </HBox.margin>
+         </Label>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+         <children>
+            <AnchorPane prefHeight="68.0" prefWidth="2.0">
+               <children>
+                  <Label layoutX="43.0" text="Długość scenariusza " textFill="#ff00dd" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="scenarioLength" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="34.0" prefHeight="28.0" prefWidth="198.0" text="-" textAlignment="CENTER" textFill="#ff00dd" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="68.0" prefWidth="204.0">
+               <children>
+                  <Label text="Poziomy Scenariusza" textFill="#ff00dd" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="conditionalLength" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="28.0" prefHeight="28.0" prefWidth="198.0" text="-" textAlignment="CENTER" textFill="#ff00dd" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox>
+         <TitledPane fx:id="actorTilePaneId" animated="false" text="Aktorzy">
+            <ListView fx:id="actorsListId" />
+         </TitledPane>
+         <TitledPane fx:id="actorSystemListId" animated="false" text="Aktorzy Systemowi">
+               <ListView fx:id="actorsSystemListId" />
+         </TitledPane>
+      </HBox>
+      <TitledPane fx:id="scenarioPane" animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Scenariusz">
+         <content>
+            <VBox fx:id="treeContainerBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+         </content></TitledPane>
+   </VBox>
+</ScrollPane>

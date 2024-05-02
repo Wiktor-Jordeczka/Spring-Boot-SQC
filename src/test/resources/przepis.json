@@ -1,0 +1,70 @@
+{
+  "scenarioName": "Przepis",
+  "actors": [
+    "Student",
+    "Wykładowca"
+  ],
+  "systemActors": [
+    "System Uczelniany"
+  ],
+  "steps": [
+    {
+      "step": "Student uczęszcza na zajęcia z przedmiotu Inżynieria Oprogramowania."
+    },
+    {
+      "step": "Nadchodzi koniec semestru i termin egzaminu z Inżynierii Oprogramowania."
+    },
+    {
+      "step": "Student nie zaliczył wszystkich laboratoriów."
+    },
+    {
+      "step": "Student przychodzi na konsultacje do wykładowcy prowadzącego Inżynierię Oprogramowania."
+    },
+    {
+      "step": "Student pyta wykładowcy czy jest jakaś możliwość uzyskania przepisu na egzamin."
+    },
+    {
+      "step": "Wykładowca sprawdza frekwencję studenta na zajęciach w Systemie Uczelnianym."    },
+    {
+      "step": "IF: Frekwencja studenta jest niska",
+      "subSteps": [
+        {
+          "step": "Wykładowca odmawia przepisu ze względu na niską frekwencję."
+        }
+      ]
+    },
+    {
+      "step": "IF: Frekwencja studenta jest wysoka",
+      "subSteps": [
+        {
+          "step": "Wykładowca sprawdza postępy studenta w zaliczaniu laboratoriów."
+        },
+        {
+          "step": "IF: Student ma niezaliczone więcej niż 2 laboratoria",
+          "subSteps": [
+            {
+              "step": "Wykładowca odmawia przepisu ze względu na zbyt dużą ilość niezaliczonych laboratoriów."
+            }
+          ]
+        },
+        {
+          "step": "IF: Student ma co najwyżej 2 niezaliczone laboratoria",
+          "subSteps": [
+            {
+              "step": "Wykładowca zgadza się wydać przepis pod warunkiem zaliczenia brakujących laboratoriów w dodatkowym terminie."
+            },
+            {
+              "step": "Wykładowca wypełnia w Systemie Uczelnianym wniosek o dodatkowy termin laboratoriów dla studenta."
+            },
+            {
+              "step": "System Uczelniany generuje dokument przepisu na egzamin."
+            },
+            {
+              "step": "Wykładowca drukuje przepis i przekazuje studentowi."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

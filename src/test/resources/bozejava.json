@@ -1,0 +1,80 @@
+{
+  "scenarioName": "BozeJava",
+  "actors": [
+    "Programista",
+    "Kolega"
+  ],
+  "systemActors": [
+    "JDK",
+    "IDE",
+    "Serwer"
+  ],
+  "steps": [
+    {
+      "step": "Programista Java zaczyna nowy projekt wykorzystujący Spring Boot."
+    },
+    {
+      "step": "Programista dodaje dependency w pliku pom.xml dla biblioteki liczącejterminy."
+    },
+    {
+      "step": "Podczas kompilacji, IDE zgłasza błędy."
+    },
+    {
+      "step": "IF Programista próbuje rozwiązać problem: ",
+      "subSteps": [
+        {
+          "step": "Sprawdza logi błędów w IDE."
+        },
+        {
+          "step": "Próbuje kompilacji z linii poleceń przez Mavena."
+        },
+        {
+          "step": "IF: Błędy występują także przez terminal",
+          "subSteps": [
+            {
+              "step": "Wyszukuje odpowiedzi na StackOverflow"
+            },
+            {
+              "step": "Próbuje usunąć i dodać ponownie dependency"
+            },
+            {
+              "step": "Czyści cache i retry kompilacji"
+            },
+            {
+              "step": "Restarcuje IDE i komputer ☹️"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "Nic nie pomaga..."
+    },
+    {
+      "step": "IF Programista prosi kolegę programistę o pomoc",
+      "subSteps": [
+        {
+          "step": "Kolega sprawdza wersję JDK programisty"
+        },
+        {
+          "step": "Okazuje się, że programista ma zainstalowane JDK 9, a projekt wymaga minimum JDK 11"
+        }
+      ]
+    },
+    {
+      "step": "Programista instaluje najnowsze LTS JDK."
+    },
+    {
+      "step": "Projekt kompiluje się bez problemów!"
+    },
+    {
+      "step": "Programista uruchamia aplikację na serwerze..."
+    },
+    {
+      "step": "WYSTĘPUJĄ KOLEJNE BŁĘDY!!!"
+    },
+    {
+      "step": "Programista wpada w rozpacz... 😭"
+    }
+  ]
+}

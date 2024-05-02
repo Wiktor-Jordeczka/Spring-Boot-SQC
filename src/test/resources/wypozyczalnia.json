@@ -1,0 +1,90 @@
+{
+  "scenarioName": "Wypozyczalnia",
+  "actors": [
+    "Czytelnik",
+    "Bibliotekarz"
+  ],
+  "systemActors": [
+    "System biblioteczny"
+  ],
+  "steps": [
+    {
+      "step": "Czytelnik podchodzi do bibliotekarza z prośbą o wypożyczenie książki."
+    },
+    {
+      "step": "Bibliotekarz prosi o kartę biblioteczną."
+    },
+    {
+      "step": "IF: Czytelnik posiada kartę biblioteczną",
+      "subSteps": [
+        {
+          "step": "Czytelnik okazuje kartę biblioteczną."
+        },
+        {
+          "step": "Bibliotekarz sprawdza status konta czytelnika."
+        },
+        {
+          "step": "IF: Konto czytelnika jest zablokowane",
+          "subSteps": [
+            {
+              "step": "Bibliotekarz informuje czytelnika o zablokowaniu konta i niemożności wypożyczenia książek."
+            }
+          ]
+        },
+        {
+          "step": "IF: Konto czytelnika jest aktywne",
+          "subSteps": [
+            {
+              "step": "Bibliotekarz prosi o tytuł i autora książki, którą czytelnik chce wypożyczyć."
+            },
+            {
+              "step": "Czytelnik podaje tytuł i autora."
+            },
+            {
+              "step": "Bibliotekarz sprawdza dostępność książki w systemie bibliotecznym."
+            },
+            {
+              "step": "IF: Książka jest niedostępna",
+              "subSteps": [
+                {
+                  "step": "Bibliotekarz informuje czytelnika, że książka jest aktualnie wypożyczona."
+                }
+              ]
+            },
+            {
+              "step": "IF: Książka jest dostępna",
+              "subSteps": [
+                {
+                  "step": "Bibliotekarz rejestruje wypożyczenie książki przez czytelnika w systemie."
+                },
+                {
+                  "step": "System biblioteczny generuje dokument wypożyczenia."
+                },
+                {
+                  "step": "Bibliotekarz drukuje dokument wypożyczenia i prosi czytelnika o podpis."
+                },
+                {
+                  "step": "Czytelnik podpisuje dokument."
+                },
+                {
+                  "step": "Bibliotekarz wydaje książkę czytelnikowi."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "IF: Czytelnik nie posiada karty bibliotecznej",
+      "subSteps": [
+        {
+          "step": "Bibliotekarz informuje o konieczności wyrobienia karty bibliotecznej w celu wypożyczenia książek."
+        },
+        {
+          "step": "Bibliotekarz wyjaśnia procedurę wyrobienia karty bibliotecznej."
+        }
+      ]
+    }
+  ]
+}

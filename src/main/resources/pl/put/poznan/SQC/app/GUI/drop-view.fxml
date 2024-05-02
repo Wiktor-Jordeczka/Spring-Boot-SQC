@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vBox" alignment="CENTER" minHeight="800.0" minWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.put.poznan.SQC.app.GUI.DropViewController">
+    <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" text="Upuść plik aby go otworzyć" textAlignment="CENTER" />
+</VBox>
